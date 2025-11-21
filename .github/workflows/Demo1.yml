@@ -6,5 +6,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Print welcome message
-        run: echo "Welcome to GitHub Actions using YAML"
+      - name: Print welcome message and OS
+        run: |
+          echo "Welcome to GitHub Actions using YAML"
+          echo "Current OS is ${{ runner.os }}"
+          echo "Github event name is ${{github.event_name}}"
+          pwd
+          ls ~
